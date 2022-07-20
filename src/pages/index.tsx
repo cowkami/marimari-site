@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Grommet, Box, Text, Button } from 'grommet';
-import { Up, Phone, Mail } from "grommet-icons";
+import { Grommet, Box, Text, Button, Heading } from 'grommet';
+import { Menu, Phone, Mail } from "grommet-icons";
 import { IncomingMessage } from "http";
 import { traceDeprecation } from "process";
 
 const expand = 'sm'
 
-const Marimari = (
+const storeName = (
   <>
     marimari &trade;
   </>
@@ -33,7 +33,7 @@ const MariHeader = () => (
     pad={{ vertical: "medium", horizontal: "medium"}}
     justify="center"
   >
-    <Text weight="bold" color="assistance"> { Marimari } </Text>
+    <Text weight="bold" color="assistance"> { storeName } </Text>
   </Box> 
 );
 
@@ -46,10 +46,12 @@ const MariFooter = () => (
     justify="center"
   >
     <Box direction="row" justify="center">
-      <Text weight="bold" color="accent">marimari &trade;</Text>
+      <Heading color="accent">
+        { storeName } 
+      </Heading>
     </Box>
     <Box direction="row" justify="center">
-      <Phone />
+      <Phone /> 
       <Text> {"0120-345-6789"} </Text>
     </Box>
     <Box direction="row" justify="center">
@@ -78,13 +80,10 @@ const NavBar = () => (
     pad={{ vertical: "small", horizontal: "medium"}}
   >
     <Box align="left">
-      <Text weight="bold">marimari</Text>
+      <Text weight="bold"> { storeName } </Text>
     </Box>
     <Box align="right">
-      <Button
-        icon={<Up />}
-        onClick={() => {}}
-      />
+      <Button icon={<Menu />} onClick={() => {}} />
     </Box>
   </Box> 
 );
