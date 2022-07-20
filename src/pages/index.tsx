@@ -46,9 +46,7 @@ const MariFooter = () => (
     justify="center"
   >
     <Box direction="row" justify="center">
-      <Heading color="accent">
-        { storeName } 
-      </Heading>
+      <Heading color="accent"> { storeName } </Heading>
     </Box>
     <Box direction="row" justify="center">
       <Phone /> 
@@ -56,9 +54,7 @@ const MariFooter = () => (
     </Box>
     <Box direction="row" justify="center">
       <Mail />
-      <Text>
-        {"mari_mari_croffle@gmail.com"}
-      </Text>
+      <Text> {"mari_mari_croffle@gmail.com"} </Text>
     </Box>
   </Box> 
 );
