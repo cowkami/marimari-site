@@ -1,10 +1,7 @@
 import * as React from "react";
 import { Grommet, Box, Text, Button, Heading } from 'grommet';
 import { Menu, Phone, Mail } from "grommet-icons";
-import { IncomingMessage } from "http";
-import { traceDeprecation } from "process";
 
-const expand = 'sm'
 
 const storeName = (
   <>
@@ -15,7 +12,7 @@ const storeName = (
 const mariTheme = {
   global: {
     font: {
-      family: "Roboto"
+      family: "Sans-serif"
     },
     colors: {
       brand: "#E3C576",
@@ -33,7 +30,7 @@ const MariHeader = () => (
     pad={{ vertical: "medium", horizontal: "medium"}}
     justify="center"
   >
-    <Text weight="bold" color="assistance"> { storeName } </Text>
+    <Text weight="bold" color="assistance" size="large"> { storeName } </Text>
   </Box> 
 );
 
@@ -59,9 +56,41 @@ const MariFooter = () => (
   </Box> 
 );
 
+const News = () => (
+  <Box justify="between" align="center" background="brand">
+    <Heading level="2">
+      News
+    </Heading>
+  </Box>
+);
+
+const MariMenu = () => (
+  <Box justify="between" align="center" background="brand">
+    <Heading level="2">
+      Menu
+    </Heading>
+  </Box>
+);
+
+const OpenAt = () => (
+  <Box direction="column" justify="between" align="center" background="brand">
+    <Heading level="2">
+      Open
+    </Heading>
+    <Text weight="bold" color="assistance">
+      <p>水~土曜日 11:00~17:30</p>
+      <p>日曜日 11:00~18:00</p>
+      <p>※売り切れ次第終了</p>
+    </Text>
+  </Box>
+)
+
 const MainPage = () => (
   <>
     <MariHeader />
+    {/* <News /> */}
+    <MariMenu />
+    <OpenAt />
     <MariFooter />
   </>
 );
